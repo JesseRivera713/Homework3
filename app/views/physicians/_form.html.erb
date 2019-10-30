@@ -1,0 +1,69 @@
+<%= form_with(model: physician, local: true) do |form| %>
+  <% if physician.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(physician.errors.count, "error") %> prohibited this physician from being saved:</h2>
+
+      <ul>
+        <% physician.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :speciality %>
+    <%= form.text_field :speciality %>
+  </div>
+
+  <h3>Office Locations</h3>
+  <div class="nested-fields"></div>
+  <div class="field">
+  <label for="physician_offices_attributes_1572401283197_street_address">Street address</label>
+  </div>
+  <input type="text" name="physician[offices_attributes][1572401283197][street_address]" id="physician_offices_attributes_1572401283197_street_address">
+  </div>
+  <div class="field">
+    <label for="physician_offices_attributes_1572401283197_zip">Zip</label>
+    <input type="text" name="physician[offices_attributes][1572401283197][zip]" id="physician_offices_attributes_1572401283197_zip">
+  </div>
+  <div class="field">
+    <label for="physician_offices_attributes_1572401283197_phone">Phone</label>
+    <input type="text" name="physician[offices_attributes][1572401283197][phone]" id="physician_offices_attributes_1572401283197_phone">
+  </div>
+  <div class="nested-links">
+    <input value="false" type="hidden" name="physician[offices_attributes][1572401283197][_destroy]" id="physician_offices_attributes_1572401283197__destroy"><a class="remove_fields dynamic" href="#">Remove Office</a>
+</div>
+</div>
+
+
+  <div id="offices">
+    <a class="add_fields" data-association="office" data-associations="offices" data-association-insertion-template="&lt;div class=&quot;nested-fields&quot;&gt;
+  &lt;div class=&quot;field&quot;&gt;
+      &lt;label for=&quot;physician_offices_attributes_new_offices_street_address&quot;&gt;Street address&lt;/label&gt;
+      &lt;input type=&quot;text&quot; name=&quot;physician[offices_attributes][new_offices][street_address]&quot; id=&quot;physician_offices_attributes_new_offices_street_address&quot; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;field&quot;&gt;
+      &lt;label for=&quot;physician_offices_attributes_new_offices_zip&quot;&gt;Zip&lt;/label&gt;
+      &lt;input type=&quot;text&quot; name=&quot;physician[offices_attributes][new_offices][zip]&quot; id=&quot;physician_offices_attributes_new_offices_zip&quot; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;field&quot;&gt;
+      &lt;label for=&quot;physician_offices_attributes_new_offices_phone&quot;&gt;Phone&lt;/label&gt;
+      &lt;input type=&quot;text&quot; name=&quot;physician[offices_attributes][new_offices][phone]&quot; id=&quot;physician_offices_attributes_new_offices_phone&quot; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;nested-links&quot;&gt;
+      &lt;input value=&quot;false&quot; type=&quot;hidden&quot; name=&quot;physician[offices_attributes][new_offices][_destroy]&quot; id=&quot;physician_offices_attributes_new_offices__destroy&quot; /&gt;&lt;a class=&quot;remove_fields dynamic&quot; href=&quot;#&quot;&gt;Remove Office&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+" href="#">Add an Office</a>
+<hr>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

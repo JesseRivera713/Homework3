@@ -1,0 +1,83 @@
+// Place all the styles related to the physicians controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#header {
+    padding: 10px;
+    background-color: lightgray;
+    border: 1px solid black;
+}
+
+
+hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
+
+table.blueTable td, table.blueTable th {
+    border: 1px solid #AAAAAA;
+    border-top-color: rgb(170, 170, 170);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(170, 170, 170);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color: rgb(170, 170, 170);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(170, 170, 170);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    padding: 3px 2px;
+    padding-top: 3px;
+    padding-right: 2px;
+    padding-bottom: 3px;
+    padding-left: 2px;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+table.blueTable {
+    border: 1px solid #1C6EA4;
+    border-top-color: rgb(28, 110, 164);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(28, 110, 164);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color: rgb(28, 110, 164);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(28, 110, 164);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    background-color: #EEEEEE;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table.blueTable tbody td {
+    font-size: 13px;
+}
